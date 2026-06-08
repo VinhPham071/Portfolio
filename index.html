@@ -246,17 +246,28 @@
             const certContainer = document.getElementById('cert-container');
             certContainer.innerHTML = ''; 
             portfolioData.educationAndCerts.certGroups.forEach(group => {
-                let slides = group.certs.map(cert => `
-                    <div class="cert-card-slide">
-                        <i class="fa-brands fa-google" style="font-size: 2rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                let slides = group.certs.map(cert => {
+                    
+                    // Logic ưu tiên hiển thị Ảnh (nếu có), không có ảnh thì nhúng PDF
+                    let certVisual = '';
+                    if (cert.img && cert.img !== "") {
+                        certVisual = `<img src="${cert.img}" style="width: 100%; height: 200px; object-fit: contain; border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 15px; background: #fff;" alt="${cert.title[lang]}">`;
+                    } else if (cert.pdf && cert.pdf !== "") {
+                        certVisual = `<iframe src="${cert.pdf}#toolbar=0" style="width: 100%; height: 200px; border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 15px; background: #fff; pointer-events: none;"></iframe>`;
+                    }
+
+                    return `
+                    <div class="cert-card-slide" style="min-width: 340px;">
+                        ${certVisual}
                         <h4 style="font-size: 1.1rem; margin-bottom: 5px;">${cert.title[lang]}</h4>
                         <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px; flex-grow:1;">${cert.date[lang]}</p>
                         <div style="display:flex; gap:10px;">
-                            <a href="${cert.pdf}" target="_blank" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.85rem;"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+                            <a href="${cert.pdf || cert.img}" target="_blank" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.85rem;"><i class="fa-solid fa-expand"></i> Phóng to</a>
                             <a href="${cert.verifyUrl}" target="_blank" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.85rem; border-color: var(--primary-light); color: var(--primary-light);"><i class="fa-solid fa-check"></i> ${i18n[lang].cert_verify}</a>
                         </div>
                     </div>
-                `).join('');
+                    `;
+                }).join('');
                 
                 certContainer.innerHTML += `
                     <div class="cert-group">
