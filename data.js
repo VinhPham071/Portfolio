@@ -6,7 +6,7 @@
 const portfolioData = {
     profile: {
         name: "Hoàng Vĩnh",
-        title: "Data-Driven Performance Marketing | Building Toward User Acquisition & Mobile Growth",
+        title: "Data-Driven Performance Marketing | Building Toward User Acquisition",
         email: "vinhpham071@gmail.com",
         phone: "+84 935 736 964",
         stats: {
