@@ -74,7 +74,7 @@
         .cert-slider::-webkit-scrollbar { height: 8px; }
         .cert-slider::-webkit-scrollbar-track { background: var(--border-color); border-radius: 4px; }
         .cert-slider::-webkit-scrollbar-thumb { background: var(--primary-light); border-radius: 4px; }
-        .cert-card-slide { min-width: 300px; max-width: 400px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 25px; scroll-snap-align: start; flex: 0 0 auto; display: flex; flex-direction: column; }
+        .cert-card-slide { min-width: 340px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 25px; scroll-snap-align: start; flex: 0 0 auto; display: flex; flex-direction: column; }
         
         /* Case Studies Grid */
         .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
@@ -84,9 +84,9 @@
         .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
         .tag { background-color: var(--bg-color); color: var(--text-muted); padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid var(--border-color);}
         
-        /* Growth Analysis Section */
-        .growth-box { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 40px; }
-        .growth-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 20px; }
+        /* ĐÃ ĐỒNG BỘ: Sửa hoàn toàn định dạng CSS mảng Blog */
+        .blog-box { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 40px; }
+        .blog-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 20px; }
         .takeaway-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
         .tk-item { background: var(--bg-color); padding: 25px; border-radius: 12px; border-top: 3px solid var(--primary-light); }
         .tk-metric { font-size: 0.8rem; font-weight: 700; color: var(--primary-light); text-transform: uppercase; margin-bottom: 10px; display: block; letter-spacing: 0.5px;}
@@ -105,7 +105,7 @@
         @media (max-width: 768px) {
             .hero-content { flex-direction: column; text-align: center; }
             .nav-links { display: none; }
-            .growth-header { flex-direction: column; align-items: flex-start; }
+            .blog-header { flex-direction: column; align-items: flex-start; }
             .modal-content { padding: 25px; }
         }
     </style>
@@ -119,8 +119,7 @@
                 <li><a href="#about" data-i18n="nav_about">Về tôi</a></li>
                 <li><a href="#education" data-i18n="nav_edu">Học vấn & Chứng chỉ</a></li>
                 <li><a href="#projects" data-i18n="nav_projects">Case Studies</a></li>
-                <li><a href="#growth" data-i18n="nav_growth">Mobile Growth</a></li>
-            </ul>
+                <li><a href="#blog" data-i18n="nav_growth">Blog</a></li> </ul>
             <div class="controls">
                 <button class="icon-btn lang-switch" id="lang-toggle">EN</button>
                 <button class="icon-btn" id="theme-toggle"><i class="fa-solid fa-moon"></i></button>
@@ -176,11 +175,10 @@
         </div>
     </section>
 
-    <section id="growth">
+    <section id="blog">
         <div class="container">
-            <h2 class="section-title" data-i18n="title_growth">Phân tích Mobile Growth</h2>
-            <div class="growth-box" id="growth-container"></div>
-        </div>
+            <h2 class="section-title" data-i18n="title_growth">Blog & Phân tích</h2>
+            <div class="blog-box" id="blog-container"></div> </div>
     </section>
 
     <div id="projectModal" class="modal-overlay">
@@ -209,18 +207,18 @@
 
         const i18n = {
             vi: {
-                nav_about: "Tổng quan", nav_edu: "Chứng chỉ", nav_projects: "Case Studies", nav_growth: "Mobile Growth",
+                nav_about: "Tổng quan", nav_edu: "Chứng chỉ", nav_projects: "Case Studies", nav_growth: "Blog",
                 hero_title: "Chào bạn, tôi là <br><span style='color: var(--primary);'>Hoàng Vĩnh</span>",
                 title_about: "Chỉ số nổi bật", stat_1: "Tháng thực chiến", stat_2: "Dự án chuyên sâu", stat_3: "% Tư duy Data",
-                title_certs: "Nền tảng & Chứng chỉ", title_projects: "Chiến dịch & Vận hành", title_growth: "Tư duy Mobile Growth",
-                btn_detail: "Xem chi tiết & Số liệu", btn_read_pdf: "Đọc bản PDF chi tiết", cert_verify: "Xác thực chứng chỉ",
+                title_certs: "Nền tảng & Chứng chỉ", title_projects: "Chiến dịch & Vận hành", title_growth: "Blog chuyên ngành",
+                btn_detail: "Xem chi tiết & Số liệu", btn_read_pdf: "Đọc bài phân tích", cert_verify: "Xác thực chứng chỉ",
                 modal_h1: "Bối cảnh (Context)", modal_h2: "Chiến lược (Strategy)", modal_h3: "Số liệu đạt được (Impact)"
             },
             en: {
-                nav_about: "Overview", nav_edu: "Certificates", nav_projects: "Case Studies", nav_growth: "Mobile Growth",
+                nav_about: "Overview", nav_edu: "Certificates", nav_projects: "Case Studies", nav_growth: "Blog",
                 hero_title: "Hi there, I'm <br><span style='color: var(--primary);'>Hoang Vinh</span>",
                 title_about: "Key Metrics", stat_1: "Months of Practice", stat_2: "Key Projects", stat_3: "% Data-Driven",
-                title_certs: "Certificates", title_projects: "Case Studies", title_growth: "Growth Analysis",
+                title_certs: "Certificates", title_projects: "Case Studies", title_growth: "Industry Blog",
                 btn_detail: "View Details & Data", btn_read_pdf: "Read Full PDF", cert_verify: "Verify Credential",
                 modal_h1: "Context & Challenge", modal_h2: "Action & Strategy", modal_h3: "Project Impact"
             }
@@ -247,8 +245,6 @@
             certContainer.innerHTML = ''; 
             portfolioData.educationAndCerts.certGroups.forEach(group => {
                 let slides = group.certs.map(cert => {
-                    
-                    // Logic ưu tiên hiển thị Ảnh (nếu có), không có ảnh thì nhúng PDF
                     let certVisual = '';
                     if (cert.img && cert.img !== "") {
                         certVisual = `<img src="${cert.img}" style="width: 100%; height: 200px; object-fit: contain; border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 15px; background: #fff;" alt="${cert.title[lang]}">`;
@@ -257,7 +253,7 @@
                     }
 
                     return `
-                    <div class="cert-card-slide" style="min-width: 340px;">
+                    <div class="cert-card-slide">
                         ${certVisual}
                         <h4 style="font-size: 1.1rem; margin-bottom: 5px;">${cert.title[lang]}</h4>
                         <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px; flex-grow:1;">${cert.date[lang]}</p>
@@ -297,9 +293,9 @@
                 `;
             });
 
-            // Render Growth Analysis
-            const growthContainer = document.getElementById('growth-container');
-            const ga = portfolioData.growthAnalysis.featuredArticle;
+            // ĐÃ ĐỒNG BỘ: Sửa logic render lấy từ blogAnalysis và đổ vào blog-container
+            const blogContainer = document.getElementById('blog-container');
+            const ga = portfolioData.blogAnalysis.featuredArticle;
             let tkHtml = ga.takeaways.map(tk => `
                 <div class="tk-item">
                     <span class="tk-metric">${tk.metric}</span>
@@ -308,8 +304,8 @@
                 </div>
             `).join('');
 
-            growthContainer.innerHTML = `
-                <div class="growth-header">
+            blogContainer.innerHTML = `
+                <div class="blog-header">
                     <h3 style="font-size: 1.6rem; color: var(--primary); max-width: 700px;">${ga.title[lang]}</h3>
                     <a href="${ga.pdfPath}" target="_blank" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> ${i18n[lang].btn_read_pdf}</a>
                 </div>
