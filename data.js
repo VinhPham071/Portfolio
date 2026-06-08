@@ -17,7 +17,7 @@ const portfolioData = {
         }
     },
 
-    // 2. Dữ liệu mục Học vấn & Chứng chỉ
+    // 2. Dữ liệu mục Học vấn & Nhóm Chứng chỉ
     educationAndCerts: {
         edu: {
             major: { vi: "Cử nhân Kinh tế Đối ngoại", en: "Bachelor of International Business" },
@@ -29,22 +29,28 @@ const portfolioData = {
             },
             status: { vi: "Đã tốt nghiệp", en: "Graduated" }
         },
-        cert: 
-        {
-            title: { vi: "Foundations of Digital Marketing & E-commerce", en: "Foundations of Digital Marketing & E-commerce" },
-            org: { vi: "Google Career Certificates (Coursera)", en: "Google Career Certificates (Coursera)" },
-            date: { vi: "Chứng nhận hợp lệ (11/2025)", en: "Verified (Nov 2025)" },
-            verifyUrl: "https://coursera.org/verify/73X9MDRFTS43"
-        }
-        {
-            title: { vi: "AI Fundamentals", en: "AI Fundamentals" },
-            org: { vi: "Google Career Certificates (Coursera)", en: "Google Career Certificates (Coursera)" },
-            date: { vi: "Chứng nhận hợp lệ (06/2026)", en: "Verified (Jun 2026)" },
-            verifyUrl: "https://coursera.org/verify/AM2L8D565EE8"
-        }
+        
+        // DANH SÁCH CÁC NHÓM CHỨNG CHỈ
+        certGroups: [
+            {
+                // Nhóm 1: Digital Marketing
+                groupTitle: { vi: "Digital Marketing & E-commerce", en: "Digital Marketing & E-commerce" },
+                certs: [
+                    {
+                        title: { vi: "Foundations of Digital Marketing & E-commerce", en: "Foundations of Digital Marketing & E-commerce" },
+                        org: "Google Career Certificates (Coursera)",
+                        date: { vi: "Chứng nhận hợp lệ (11/2025)", en: "Verified (Nov 2025)" },
+                        img: "cert_thumb_1.jpg", // Tên file ảnh đại diện của chứng chỉ (bạn tự chụp và up lên)
+                        verifyUrl: "https://coursera.org/verify/73X9MDRFTS43" // Link xác thực hoặc link file PDF
+                    }
+                    // Nếu có thêm chứng chỉ thuộc nhóm này, copy block { title:..., org:... } dán xuống dưới (nhớ thêm dấu phẩy)
+                ]
+            }
+            // Sau này học thêm nhóm Data, bạn có thể copy block Nhóm 1 dán xuống đây làm Nhóm 2
+        ]
     },
 
-    // 3. Dữ liệu chi tiết 4 dự án (Gồm text + số liệu vẽ biểu đồ tự động)
+    // 3. Dữ liệu chi tiết 4 dự án
     projects: {
         trustingsocial: {
             title: "Trusting Social - Data Operations",
