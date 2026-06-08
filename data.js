@@ -1,12 +1,12 @@
 // =========================================================================
 // TÀI LIỆU DỮ LIỆU HỆ THỐNG - HOANG VINH PORTFOLIO
-// Bạn chỉ cần chỉnh sửa nội dung trong file này, website sẽ tự động cập nhật.
+// Định hướng: Data-Driven Performance Marketing
 // =========================================================================
 
 const portfolioData = {
     profile: {
         name: "Hoàng Vĩnh",
-        title: "Data-Driven UA Marketer | Mobile App & Game",
+        title: "Data-Driven Performance Marketing | Building Toward User Acquisition & Mobile Growth",
         email: "vinhpham071@gmail.com",
         phone: "+84 935 736 964",
         stats: {
@@ -28,32 +28,29 @@ const portfolioData = {
             status: { vi: "Đã tốt nghiệp", en: "Graduated" }
         },
         
-        // DANH SÁCH CÁC NHÓM CHỨNG CHỈ
         certGroups: [
             {
-                // Nhóm 1
                 groupTitle: { vi: "Google AI", en: "Google AI" },
                 certs: [
                     {
                         title: { vi: "AI Fundamentals", en: "AI Fundamentals" },
                         org: "Google Career Certificates (Coursera)",
-                        date: { vi: "Chứng nhận hợp lệ (06/2026)", en: "Verified (Jun 2026)" },
-                        img: "", // Bỏ trống nếu muốn dùng PDF
-                        pdf: "Coursera AM2L8D565EE8.pdf", // Tên file PDF chứng chỉ bạn đã upload
+                        date: { vi: "Tháng 06/2026", en: "Jun 2026" },
+                        img: "", 
+                        pdf: "Coursera_AM2L8D565EE8.pdf", // Đổi tên file viết liền, không dấu cách
                         verifyUrl: "https://coursera.org/verify/AM2L8D565EE8"
                     }
                 ]
             },
             {
-                // Nhóm 2
                 groupTitle: { vi: "Digital Marketing & E-commerce", en: "Digital Marketing & E-commerce" },
                 certs: [
                     {
                         title: { vi: "Foundations of Digital Marketing & E-commerce", en: "Foundations of Digital Marketing & E-commerce" },
                         org: "Google Career Certificates (Coursera)",
-                        date: { vi: "Chứng nhận hợp lệ (11/2025)", en: "Verified (Nov 2025)" },
+                        date: { vi: "Tháng 11/2025", en: "Nov 2025" },
                         img: "", 
-                        pdf: "Coursera 73X9MDRFTS43.pdf", // File PDF gốc chứng chỉ Digital Marketing
+                        pdf: "Coursera_73X9MDRFTS43.pdf", 
                         verifyUrl: "https://coursera.org/verify/73X9MDRFTS43"
                     }
                 ]
@@ -61,47 +58,144 @@ const portfolioData = {
         ]
     },
 
-    // 3. Dữ liệu chi tiết 4 dự án (GIỮ NGUYÊN NHƯ CŨ)
     projects: {
-        trustingsocial: {
-            title: "Trusting Social - Data Operations",
-            tags: ["Task Owner", "Machine Learning Data", "QA"],
-            shortDesc: { vi: "Đảm nhiệm vai trò Task Owner xử lý dữ liệu Machine Learning (OCR). Trực tiếp làm việc với Data Scientist để tối ưu luồng công việc cho team.", en: "Acted as a Task Owner for ML data labeling (OCR). Collaborated with Data Scientists to optimize workflows." },
-            role: { vi: "Task Owner / Data Labeller", en: "Task Owner / QA" },
-            context: { vi: "Mô hình Machine Learning cần nguồn dữ liệu huấn luyện khổng lồ và chính xác cao, đặc biệt trong các tác vụ nhận dạng ký tự quang học (OCR) và xây dựng bộ dữ liệu đa đích (multi-purpose).", en: "Machine Learning models required vast, highly accurate training datasets, specifically for Optical Character Recognition (OCR) and multi-purpose AI tasks." },
-            strategy: { vi: "Được tin tưởng giao vai trò Task Owner. Trực tiếp làm việc với Data Scientist để hiểu sâu về yêu cầu cốt lõi, sau đó truyền đạt lại hướng dẫn cho đội ngũ gán nhãn. Quản lý chất lượng đầu ra (QA) và báo cáo với tư duy của một Product Owner.", en: "Trusted with the Task Owner role. Collaborated directly with Data Scientists to grasp core requirements, then delivered guidelines to the labeling team. Managed QA and reported with a Product Owner mindset." },
-            impact: { vi: "Đảm bảo chất lượng dữ liệu đầu ra đạt chuẩn khắt khe với tỷ lệ QA Pass rate lên đến 98%. Sự nhịp nhàng trong việc tối ưu hóa luồng giao tiếp giữa team Data và team Labeling đã góp phần giúp mô hình AI tăng 15% hiệu suất.", en: "Maintained a strict QA Pass rate of 98%. Streamlining the communication flow between Data and Labeling teams directly contributed to a 15% boost in AI model performance." },
-            chart: { type: 'doughnut', labels: { vi: ['QA Pass (98%)', 'Needs Review (2%)'], en: ['QA Pass (98%)', 'Needs Review (2%)'] }, data: [98, 2], colors: ['#10b981', '#ef4444'], title: { vi: 'Tỷ lệ chính xác dữ liệu (QA Rate)', en: 'Data QA Accuracy Rate' } }
-        },
-        netsolutions: {
-            title: "Net Solutions - B2B Lead Gen",
-            tags: ["Meta Ads", "B2B Conversion"],
-            shortDesc: { vi: "Hỗ trợ thiết lập Meta Ads tìm kiếm Lead mảng doanh nghiệp (B2B) cho phần mềm công nghệ bảo vệ ngân sách quảng cáo.", en: "Supported Meta Ads setup for B2B lead generation targeting anti-click fraud software." },
-            role: { vi: "Hỗ trợ chạy Ads", en: "Ads Assistant" },
-            context: { vi: "Agency cần tìm kiếm tệp khách hàng B2B (doanh nghiệp) cho dịch vụ phần mềm chống click ảo (NS Ads Xperts) nhằm bảo vệ ngân sách quảng cáo cho đối tác.", en: "The agency needed to acquire B2B leads for its complex anti-click fraud software." },
-            strategy: { vi: "Trực tiếp hỗ trợ thiết lập chiến dịch chuyển đổi (Lead Form) trên Meta Ads. Lên nháp kịch bản và thông điệp quảng cáo 'Giảm 50% Chi Phí Google Ads Ngay' để đánh trúng pain-point lãng phí ngân sách của các chủ doanh nghiệp.", en: "Assisted in setting up Lead Generation campaigns on Meta Ads. Drafted ad copy targeting the pain point of 'wasted ad budgets'." },
-            impact: { vi: "Tối ưu hóa ngân sách xuất sắc: Chỉ với ngân sách thử nghiệm ~1,5 triệu VNĐ, chiến dịch do team triển khai đã tiếp cận 23.400+ người, mang về 27 Leads B2B chất lượng với CPA cực tốt ~56.500 VNĐ/Lead.", en: "With a $60 test budget, the team's campaign generated 27 high-quality B2B leads at an excellent CPA of ~56,500 VND." },
-            chart: { type: 'bar', labels: { vi: ['Reach (x1k)', 'Impressions (x1k)', 'Leads'], en: ['Reach (x1k)', 'Impressions (x1k)', 'Leads'] }, data: [23.4, 34.8, 27], colors: ['#0ea5e9', '#0ea5e9', '#0ea5e9'], title: { vi: 'Hiệu suất Meta Ads B2B', en: 'Meta Ads B2B Performance' } }
-        },
         thuedotkich: {
             title: "Thuê Đột Kích - UA Strategy",
-            tags: ["Google Ads", "Meta Ads"],
-            shortDesc: { vi: "Tham gia hỗ trợ phân bổ ngân sách Omnichannel cho dịch vụ Game VIP. Đón lõng nhu cầu Intent Capture trên Search.", en: "Assisted in cross-channel budget allocation for a VIP Gaming service, optimizing Search CPC." },
-            role: { vi: "Hỗ trợ Performance Marketing", en: "Performance Marketing Assistant" },
-            context: { vi: "Dịch vụ thuê account Đột Kích cần thu hút tập game thủ có nhu cầu trải nghiệm VIP ngắn hạn mà không cần cày cuốc.", en: "A Crossfire account rental service needed to acquire gamers seeking short-term VIP experiences." },
-            strategy: { vi: "Dưới sự hướng dẫn của quản lý, tôi hỗ trợ theo dõi chiến lược phân bổ: 65% ngân sách Push (Google Search) và 35% Remarketing (Meta Ads). Theo dõi chỉ số hàng ngày để tạo báo cáo tối ưu.", en: "Guided by senior management, I assisted in tracking the budget split: 65% Push (Google Search) and 35% Remarketing. Monitored daily metrics to create optimization reports." },
-            impact: { vi: "Góp phần giúp chiến dịch Google Search đạt CPC lý tưởng 2.000 VNĐ. Học hỏi và nắm vững quy trình A/B testing thực tế trên Meta Ads.", en: "Contributed to achieving a highly efficient 2,000 VND CPC on Search. Gained solid practical experience in Meta Ads A/B testing." },
-            chart: { type: 'doughnut', labels: { vi: ['Google Search (65%)', 'Meta Ads (35%)'], en: ['Google Search (65%)', 'Meta Ads (35%)'] }, data: [65, 35], colors: ['#3b82f6', '#8b5cf6'], title: { vi: 'Phân bổ ngân sách chiến dịch', en: 'Campaign Budget Allocation' } }
+            tags: ["Lead Generation", "Meta Ads", "Google Ads"],
+            shortDesc: { 
+                vi: "Trực tiếp lên chiến dịch Meta Lead Generation nhắm mục tiêu chuẩn xác, thu hút tập game thủ có nhu cầu trải nghiệm tài khoản VIP.", 
+                en: "Built and managed Meta Lead Generation campaigns targeting gamers seeking short-term VIP experiences." 
+            },
+            role: { 
+                vi: "Xây dựng và quản lý chiến dịch Meta Lead Gen, thiết lập quảng cáo, nhắm mục tiêu, tối ưu form và theo dõi chỉ số.", 
+                en: "Built and managed Meta Lead Gen campaigns (setup, targeting, lead form creation, performance monitoring)." 
+            },
+            context: { 
+                vi: "Dịch vụ thuê account cần tiếp cận tập game thủ có mong muốn trải nghiệm ngay tính năng VIP ngắn hạn mà không có thời gian cày cuốc.", 
+                en: "The gaming account rental service needed to efficiently acquire gamers seeking short-term VIP accounts." 
+            },
+            strategy: { 
+                vi: "Phân bổ ngân sách: Google Search (6.5M VNĐ/tháng) đón ý định tìm kiếm, Meta Ads (3.5M VNĐ/tháng) tạo Lead Form nhắm trúng pain-point.", 
+                en: "Budget split: Google Search (6.5M VND/mo) for high intent, Meta Ads (3.5M VND/mo) for targeted Lead Generation." 
+            },
+            impact: { 
+                vi: "Ghi nhận 360 Clicks với CTR 6.77%. Đạt mức CPC trung bình ~2,110 VNĐ nhờ tối ưu hóa liên tục.", 
+                en: "Generated 360 clicks with a 6.77% CTR. Maintained an efficient average CPC of ~2,110 VND." 
+            },
+            gallery: ["thuedotkich-1.jpg", "thuedotkich-2.jpg"] // Thay bằng tên file ảnh thật của bạn
+        },
+        trustingsocial: {
+            title: "Trusting Social - Data Operations",
+            tags: ["Data Operations", "QA", "Workflow"],
+            shortDesc: { 
+                vi: "Điều phối quy trình xử lý và quản lý chất lượng dữ liệu Machine Learning (OCR) phục vụ cho mô hình AI.", 
+                en: "Managed ML data labeling workflows and output quality control in collaboration with Data Scientists." 
+            },
+            role: { vi: "Data Operations Associate", en: "Data Operations Associate" },
+            context: { 
+                vi: "Mô hình Machine Learning đòi hỏi nguồn dữ liệu huấn luyện (training data) khổng lồ, chuẩn xác, đặc biệt là OCR.", 
+                en: "Machine Learning models required vast, highly accurate training datasets, specifically for OCR." 
+            },
+            strategy: { 
+                vi: "Làm việc với Data Scientist để nắm rõ yêu cầu nghiệp vụ, chuyển hóa thành hướng dẫn gán nhãn chi tiết cho đội ngũ, trực tiếp làm QA.", 
+                en: "Worked with Data Scientists to understand specs, created labeling guidelines, performed QA, and tracked delivery." 
+            },
+            impact: { 
+                vi: "Đảm bảo tính đồng bộ, thông suốt trong giao tiếp giữa đội kỹ thuật và đội vận hành dữ liệu, giúp dự án hoàn thành đúng hạn.", 
+                en: "Maintained seamless communication flows between technical and labeling teams, ensuring on-time delivery of datasets." 
+            },
+            gallery: []
         },
         hungphat: {
             title: "Thép Hùng Phát - Technical SEO",
-            tags: ["On-page SEO", "Tech Content"],
-            shortDesc: { vi: "Hỗ trợ team SEO xây dựng cấu trúc Topic Cluster chuyên sâu về luyện kim. Góp phần kéo hàng chục ngàn click tự nhiên.", en: "Collaborated with the SEO team on technical content, contributing to massive organic growth." },
-            role: { vi: "Hỗ trợ SEO Content", en: "SEO Content Assistant" },
-            context: { vi: "Thị trường B2B ngành vật liệu xây dựng (thép công nghiệp) có tính cạnh tranh từ khóa ngách cực kỳ cao. Khách hàng cần thông số chính xác trước khi mua hàng.", en: "The B2B industrial steel market has extremely high search intent competition." },
-            strategy: { vi: "Phối hợp cùng team SEO xây dựng cụm nội dung (Topic Cluster) kỹ thuật. Trực tiếp biên tập On-page và chuẩn hóa các bảng thông số trọng lượng thép.", en: "Collaborated with the SEO team to build technical Topic Clusters. Directly optimized on-page elements for technical specification tables." },
-            impact: { vi: "Nỗ lực của toàn team đã mang về hơn 95.700 lượt nhấp (Clicks) và 2,9 triệu lượt hiển thị, đẩy các key khó như 'thép i' (Top 1.6) và 'sắt v3' (Top 1.4) lên đỉnh Google.", en: "The team's collective effort drove 95,700+ organic clicks and ranked difficult keywords like 'thép i' (Pos: 1.6) to the Top of Google." },
-            chart: { type: 'line', labels: { vi: ['Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6'], en: ['Mar', 'Apr', 'May', 'Jun'] }, data: [15000, 32000, 68000, 95700], colors: ['#f59e0b'], title: { vi: 'Tăng trưởng Organic Traffic (Clicks)', en: 'SEO Organic Growth (Clicks)' } }
+            tags: ["SEO", "Organic Growth"],
+            shortDesc: { 
+                vi: "Đóng góp vào nỗ lực tối ưu SEO và xây dựng Topic Cluster chuyên sâu, thúc đẩy tăng trưởng click tự nhiên.", 
+                en: "Contributed to SEO content preparation and structured Topic Clusters, driving organic growth." 
+            },
+            role: { vi: "Hỗ trợ SEO Content", en: "SEO Content Support" },
+            context: { 
+                vi: "Thị trường thép B2B cạnh tranh từ khóa ngách gắt gao. Khách hàng cần thông số kỹ thuật chuẩn xác trước khi mua hàng.", 
+                en: "Fierce B2B steel market competition. Buyers require high-precision technical data sheets before inquiring." 
+            },
+            strategy: { 
+                vi: "Phối hợp cùng SEO Leader xây dựng Topic Cluster. Trực tiếp biên tập On-page và chuẩn hóa các bảng thông số trọng lượng thép.", 
+                en: "Collaborated with the SEO lead on Topic Clusters. Optimized on-page elements and technical specification tables." 
+            },
+            impact: { 
+                vi: "Đóng góp vào nỗ lực SEO chung giúp website đạt hơn 94.700 lượt nhấp, 2.88 triệu hiển thị với CTR 3.3% trên Google Search Console.", 
+                en: "Contributed to SEO efforts driving 94.7K clicks and 2.88M impressions with a 3.3% CTR on Google Search Console." 
+            },
+            gallery: ["hungphat-gsc.jpg"]
+        },
+        netsolutions: {
+            title: "Net Solutions - B2B Lead Gen",
+            tags: ["Performance Marketing", "B2B"],
+            shortDesc: { 
+                vi: "Hỗ trợ thiết lập, giám sát chiến dịch Meta Ads tìm kiếm khách hàng doanh nghiệp cho phần mềm bảo vệ ngân sách.", 
+                en: "Supported Meta Ads setup and tracking for B2B lead generation targeting anti-click fraud software." 
+            },
+            role: { vi: "Thực tập sinh Performance Marketing", en: "Performance Marketing Intern" },
+            context: { 
+                vi: "Tìm kiếm tệp khách hàng B2B có nhu cầu sử dụng phần mềm chống click ảo để tối ưu ngân sách quảng cáo.", 
+                en: "Needed to acquire high-quality B2B leads for anti-click fraud software." 
+            },
+            strategy: { 
+                vi: "Hỗ trợ lên chiến dịch chuyển đổi (Lead Form) trên Meta Ads, viết kịch bản đánh thẳng vào nỗi đau lãng phí ngân sách.", 
+                en: "Assisted in setting up Lead Form campaigns. Drafted high-intent ad copies targeting budget-wasting pain points." 
+            },
+            impact: { 
+                vi: "Thu thập dữ liệu chuyển đổi thực tế qua A/B testing, làm cơ sở báo cáo hiệu suất chiến dịch cho toàn team.", 
+                en: "Systematically tracked conversion data via A/B testing to help the team optimize overall performance." 
+            },
+            gallery: []
+        }
+    },
+
+    // MỚI: Dữ liệu phân tích game
+    growthAnalysis: {
+        title: { vi: "Phân Tích Tăng Trưởng (Mobile Growth)", en: "Growth Analysis" },
+        featuredArticle: {
+            title: { 
+                vi: "Nhà tiếp thị UA học được gì từ mô hình tăng trưởng của Honkai: Star Rail?", 
+                en: "What UA Marketers Can Learn From Honkai: Star Rail's Growth Model" 
+            },
+            sourceUrl: "https://www.blog.udonis.co/mobile-marketing/mobile-games/honkai-star-rail-player-count",
+            pdfPath: "hsr-analysis.pdf", // Tên file PDF của bạn
+            takeaways: [
+                {
+                    concept: "Pity System",
+                    metric: "Conversion Psychology",
+                    desc: {
+                        vi: "Ứng dụng tâm lý học hành vi biến sự 'may rủi' thành mục tiêu tính toán được, kích thích vòng lặp chuyển đổi (conversion loops).",
+                        en: "Leverages behavioral psychology to turn luck into a calculated goal, driving continuous conversion loops."
+                    }
+                },
+                {
+                    concept: "Monthly Pass",
+                    metric: "Retention Tool",
+                    desc: {
+                        vi: "Neo giữ thói quen đăng nhập hàng ngày (Daily Habit) qua giá trị tích lũy vượt trội, tối ưu tỷ lệ giữ chân (Retention).",
+                        en: "Establishes a daily log-in habit by offering outsized continuous value, locking in long-term user retention."
+                    }
+                },
+                {
+                    concept: "Battle Pass",
+                    metric: "F2P to Low Spender",
+                    desc: {
+                        vi: "Tạo dải phần thưởng mượt mà, biến người chơi miễn phí (F2P) thành người dùng trả phí thấp tự nhiên dựa trên tương tác.",
+                        en: "Smoothes the monetization bridge, naturally converting F2P users into low spenders based on pure engagement."
+                    }
+                },
+                {
+                    concept: "Eidolon System",
+                    metric: "Whale Monetization",
+                    desc: {
+                        vi: "Cơ chế tăng sức mạnh cấp số nhân nhờ trùng lặp vật phẩm, tối ưu doanh thu từ tệp người dùng chi tiêu cao (Whales).",
+                        en: "Maximizes deep monetization from high-value users (Whales) through duplicate item power scaling metrics."
+                    }
+                }
+            ]
         }
     }
 };
