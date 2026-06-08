@@ -6,7 +6,7 @@
 const portfolioData = {
     profile: {
         name: "Hoàng Vĩnh",
-        title: "Data-Driven Performance Marketing | Building Toward User Acquisition & Mobile Growth",
+        title: "Data-Driven Performance Marketing | Building Toward User Acquisition",
         email: "vinhpham071@gmail.com",
         phone: "+84 935 736 964",
         stats: {
@@ -85,13 +85,13 @@ const portfolioData = {
             gallery: ["thuedotkich-1.png", "thuedotkich-2.png"]
         },
         trustingsocial: {
-            title: "Trusting Social - Data Operations",
+            title: "Trusting Social - Data Labelling & Operations",
             tags: ["Data Operations", "QA", "Workflow"],
             shortDesc: { 
                 vi: "Điều phối quy trình xử lý và quản lý chất lượng dữ liệu Machine Learning (OCR) phục vụ cho mô hình AI.", 
                 en: "Managed ML data labeling workflows and output quality control in collaboration with Data Scientists." 
             },
-            role: { vi: "Data Operations Associate", en: "Data Operations Associate" },
+            role: { vi: "Data Labelling & Operations", en: "Data Labelling & Operations" },
             context: { 
                 vi: "Mô hình Machine Learning đòi hỏi nguồn dữ liệu huấn luyện (training data) khổng lồ, chuẩn xác, đặc biệt là OCR.", 
                 en: "Machine Learning models required vast, highly accurate training datasets, specifically for OCR." 
@@ -130,12 +130,12 @@ const portfolioData = {
         },
         netsolutions: {
             title: "Net Solutions - B2B Lead Gen",
-            tags: ["Performance Marketing", "B2B"],
+            tags: ["Digital Marketing", "B2B"],
             shortDesc: { 
                 vi: "Hỗ trợ thiết lập, giám sát chiến dịch Meta Ads tìm kiếm khách hàng doanh nghiệp cho phần mềm bảo vệ ngân sách.", 
                 en: "Supported Meta Ads setup and tracking for B2B lead generation targeting anti-click fraud software." 
             },
-            role: { vi: "Thực tập sinh Performance Marketing", en: "Performance Marketing Intern" },
+            role: { vi: "Thực tập sinh Digital Marketing", en: "Digital Marketing Intern" },
             context: { 
                 vi: "Tìm kiếm tệp khách hàng B2B có nhu cầu sử dụng phần mềm chống click ảo để tối ưu ngân sách quảng cáo.", 
                 en: "Needed to acquire high-quality B2B leads for anti-click fraud software." 
@@ -157,7 +157,7 @@ const portfolioData = {
         title: { vi: "Góc Chia Sẻ & Phân Tích", en: "Blog & Analysis" },
         featuredArticle: {
             title: { 
-                vi: "Nhà tiếp thị UA học được gì từ mô hình tăng trưởng của Honkai: Star Rail?", 
+                vi: "UA Marketer học được gì từ mô hình tăng trưởng của Honkai: Star Rail?", 
                 en: "What UA Marketers Can Learn From Honkai: Star Rail's Growth Model" 
             },
             sourceUrl: "https://www.blog.udonis.co/mobile-marketing/mobile-games/honkai-star-rail-player-count",
