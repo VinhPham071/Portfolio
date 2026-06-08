@@ -37,7 +37,7 @@ const portfolioData = {
                         org: "Google Career Certificates (Coursera)",
                         date: { vi: "Tháng 06/2026", en: "Jun 2026" },
                         img: "", 
-                        pdf: "Coursera_AM2L8D565EE8.pdf", // Đổi tên file viết liền, không dấu cách
+                        pdf: "Coursera AM2L8D565EE8.pdf", // Đổi tên file viết liền, không dấu cách
                         verifyUrl: "https://coursera.org/verify/AM2L8D565EE8"
                     }
                 ]
@@ -50,7 +50,7 @@ const portfolioData = {
                         org: "Google Career Certificates (Coursera)",
                         date: { vi: "Tháng 11/2025", en: "Nov 2025" },
                         img: "", 
-                        pdf: "Coursera_73X9MDRFTS43.pdf", 
+                        pdf: "Coursera 73X9MDRFTS43.pdf", 
                         verifyUrl: "https://coursera.org/verify/73X9MDRFTS43"
                     }
                 ]
@@ -82,7 +82,7 @@ const portfolioData = {
                 vi: "Ghi nhận 360 Clicks với CTR 6.77%. Đạt mức CPC trung bình ~2,110 VNĐ nhờ tối ưu hóa liên tục.", 
                 en: "Generated 360 clicks with a 6.77% CTR. Maintained an efficient average CPC of ~2,110 VND." 
             },
-            gallery: ["thuedotkich-1.jpg", "thuedotkich-2.jpg"] // Thay bằng tên file ảnh thật của bạn
+            gallery: ["thuedotkich-1.png", "thuedotkich-2.png"] // Thay bằng tên file ảnh thật của bạn
         },
         trustingsocial: {
             title: "Trusting Social - Data Operations",
@@ -126,16 +126,16 @@ const portfolioData = {
                 vi: "Đóng góp vào nỗ lực SEO chung giúp website đạt hơn 94.700 lượt nhấp, 2.88 triệu hiển thị với CTR 3.3% trên Google Search Console.", 
                 en: "Contributed to SEO efforts driving 94.7K clicks and 2.88M impressions with a 3.3% CTR on Google Search Console." 
             },
-            gallery: ["hungphat-gsc.jpg"]
+            gallery: ["gsc-screenshot.png"]
         },
         netsolutions: {
             title: "Net Solutions - B2B Lead Gen",
-            tags: ["Performance Marketing", "B2B"],
+            tags: ["Digital Marketing", "B2B"],
             shortDesc: { 
                 vi: "Hỗ trợ thiết lập, giám sát chiến dịch Meta Ads tìm kiếm khách hàng doanh nghiệp cho phần mềm bảo vệ ngân sách.", 
                 en: "Supported Meta Ads setup and tracking for B2B lead generation targeting anti-click fraud software." 
             },
-            role: { vi: "Thực tập sinh Performance Marketing", en: "Performance Marketing Intern" },
+            role: { vi: "Thực tập sinh Digital Marketing", en: "Digital Marketing Intern" },
             context: { 
                 vi: "Tìm kiếm tệp khách hàng B2B có nhu cầu sử dụng phần mềm chống click ảo để tối ưu ngân sách quảng cáo.", 
                 en: "Needed to acquire high-quality B2B leads for anti-click fraud software." 
@@ -157,7 +157,7 @@ const portfolioData = {
         title: { vi: "Phân Tích Tăng Trưởng (Mobile Growth)", en: "Growth Analysis" },
         featuredArticle: {
             title: { 
-                vi: "Nhà tiếp thị UA học được gì từ mô hình tăng trưởng của Honkai: Star Rail?", 
+                vi: "UA Marketer học được gì từ mô hình tăng trưởng của Honkai: Star Rail?", 
                 en: "What UA Marketers Can Learn From Honkai: Star Rail's Growth Model" 
             },
             sourceUrl: "https://www.blog.udonis.co/mobile-marketing/mobile-games/honkai-star-rail-player-count",
