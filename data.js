@@ -29,11 +29,18 @@ const portfolioData = {
             },
             status: { vi: "Đã tốt nghiệp", en: "Graduated" }
         },
-        cert: {
+        cert: 
+        {
             title: { vi: "Foundations of Digital Marketing & E-commerce", en: "Foundations of Digital Marketing & E-commerce" },
             org: { vi: "Google Career Certificates (Coursera)", en: "Google Career Certificates (Coursera)" },
             date: { vi: "Chứng nhận hợp lệ (11/2025)", en: "Verified (Nov 2025)" },
             verifyUrl: "https://coursera.org/verify/73X9MDRFTS43"
+        }
+        {
+            title: { vi: "AI Fundamentals", en: "AI Fundamentals" },
+            org: { vi: "Google Career Certificates (Coursera)", en: "Google Career Certificates (Coursera)" },
+            date: { vi: "Chứng nhận hợp lệ (06/2026)", en: "Verified (Jun 2026)" },
+            verifyUrl: "https://coursera.org/verify/AM2L8D565EE8"
         }
     },
 
