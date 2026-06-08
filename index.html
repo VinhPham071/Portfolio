@@ -138,8 +138,7 @@
             <div class="hero-img"><img src="Avatar.jpg" alt="Hoang Vinh"></div>
             <div class="hero-text">
                 <h1 id="hero-title">Chào bạn, tôi là <br><span style="color: var(--primary);">Hoàng Vĩnh</span></h1>
-               <p class="tagline" id="hero-tagline">Data-Driven Performance Marketer</p>
-                
+                <p class="tagline" id="hero-tagline">Data-Driven Performance Marketer</p>
                 <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: inherit;">
                     <a href="cv.pdf" class="btn btn-primary" target="_blank">
                         <i class="fa-solid fa-file-pdf"></i> Download CV
@@ -154,6 +153,9 @@
                         <i class="fa-solid fa-phone"></i> +84 935 736 964
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
 
     <section id="about" style="background-color: var(--bg-color);">
         <div class="container">
@@ -235,7 +237,7 @@
                 nav_about: "Tổng quan", nav_edu: "Học vấn", nav_projects: "Dự án", nav_growth: "Blog",
                 hero_title: "Chào bạn, tôi là <br><span style='color: var(--primary);'>Hoàng Vĩnh</span>",
                 title_about: "Chỉ số nổi bật", stat_1: "Tháng thực chiến", stat_2: "Dự án chuyên sâu",
-                title_edu_cert: "Học vấn & Chứng chỉ", title_projects: "Kinh Nghiệm & Dự Án", title_growth: "Blog",
+                title_edu_cert: "Học vấn & Chứng chỉ", title_projects: "Dự án", title_growth: "Blog",
                 btn_detail: "Xem chi tiết & Số liệu", btn_read_pdf: "Đọc bài phân tích", cert_verify: "Xác thực chứng chỉ",
                 modal_h1: "Bối cảnh (Context)", modal_h2: "Chiến lược (Strategy)", modal_h3: "Số liệu đạt được (Impact)"
             },
@@ -261,6 +263,21 @@
             document.getElementById('hero-title').innerHTML = lang === 'vi' ? i18n.vi.hero_title : i18n.en.hero_title;
             document.getElementById('hero-tagline').innerText = portfolioData.profile.title;
             
+            // Xử lý nạp dữ liệu Email, Phone, LinkedIn ở khu vực Hero
+            const profile = portfolioData.profile;
+            document.getElementById('hero-email').innerText = profile.email;
+            document.getElementById('hero-email').href = "mailto:" + profile.email;
+            
+            document.getElementById('hero-phone').innerText = profile.phone;
+            document.getElementById('hero-phone').href = "tel:" + profile.phone.replace(/\s+/g, '');
+            
+            if(profile.linkedin) {
+                document.getElementById('hero-linkedin').href = profile.linkedin;
+                document.getElementById('hero-linkedin').style.display = 'inline-flex';
+            } else {
+                document.getElementById('hero-linkedin').style.display = 'none';
+            }
+
             document.getElementById('stat-months').setAttribute('data-target', portfolioData.profile.stats.months);
             document.getElementById('stat-projects').setAttribute('data-target', portfolioData.profile.stats.projects);
 
@@ -403,7 +420,7 @@
                     const updateCount = () => {
                         const count = +counter.innerText;
                         if (count < target) { counter.innerText = Math.ceil(count + target/30); setTimeout(updateCount, 40); }
-                        else { counter.innerText = target + (target === 100 ? '%' : '+'); }
+                        else { counter.innerText = target + '+'; }
                     }; updateCount();
                 }); hasCounted = true;
             }
