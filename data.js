@@ -37,7 +37,7 @@ const portfolioData = {
                         org: "Google Career Certificates (Coursera)",
                         date: { vi: "Tháng 06/2026", en: "Jun 2026" },
                         img: "", 
-                        pdf: "Coursera AM2L8D565EE8.pdf", // Đổi tên file viết liền, không dấu cách
+                        pdf: "Coursera AM2L8D565EE8.pdf", // Khớp chính xác tên file có dấu cách
                         verifyUrl: "https://coursera.org/verify/AM2L8D565EE8"
                     }
                 ]
@@ -50,7 +50,7 @@ const portfolioData = {
                         org: "Google Career Certificates (Coursera)",
                         date: { vi: "Tháng 11/2025", en: "Nov 2025" },
                         img: "", 
-                        pdf: "Coursera 73X9MDRFTS43.pdf", 
+                        pdf: "Coursera 73X9MDRFTS43.pdf", // Khớp chính xác tên file có dấu cách
                         verifyUrl: "https://coursera.org/verify/73X9MDRFTS43"
                     }
                 ]
@@ -82,7 +82,7 @@ const portfolioData = {
                 vi: "Ghi nhận 360 Clicks với CTR 6.77%. Đạt mức CPC trung bình ~2,110 VNĐ nhờ tối ưu hóa liên tục.", 
                 en: "Generated 360 clicks with a 6.77% CTR. Maintained an efficient average CPC of ~2,110 VND." 
             },
-            gallery: ["thuedotkich-1.png", "thuedotkich-2.png"] // Thay bằng tên file ảnh thật của bạn
+            gallery: ["thuedotkich-1.png", "thuedotkich-2.png"] // Đã đổi sang file PNG
         },
         trustingsocial: {
             title: "Trusting Social - Data Operations",
@@ -126,7 +126,7 @@ const portfolioData = {
                 vi: "Đóng góp vào nỗ lực SEO chung giúp website đạt hơn 94.700 lượt nhấp, 2.88 triệu hiển thị với CTR 3.3% trên Google Search Console.", 
                 en: "Contributed to SEO efforts driving 94.7K clicks and 2.88M impressions with a 3.3% CTR on Google Search Console." 
             },
-            gallery: ["gsc-screenshot.png"]
+            gallery: ["gsc-screenshot.png"] // Khớp với file ảnh trong thư mục
         },
         netsolutions: {
             title: "Net Solutions - B2B Lead Gen",
@@ -152,7 +152,6 @@ const portfolioData = {
         }
     },
 
-    // MỚI: Dữ liệu phân tích game
     growthAnalysis: {
         title: { vi: "Phân Tích Tăng Trưởng (Mobile Growth)", en: "Growth Analysis" },
         featuredArticle: {
@@ -161,7 +160,7 @@ const portfolioData = {
                 en: "What UA Marketers Can Learn From Honkai: Star Rail's Growth Model" 
             },
             sourceUrl: "https://www.blog.udonis.co/mobile-marketing/mobile-games/honkai-star-rail-player-count",
-            pdfPath: "hsr-analysis.pdf", // Tên file PDF của bạn
+            pdfPath: "hsr-analysis.pdf", // Khớp với tên file PDF bài phân tích
             takeaways: [
                 {
                     concept: "Pity System",
