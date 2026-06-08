@@ -63,11 +63,15 @@
         .btn-outline:hover { background-color: var(--border-color); transform: translateY(-2px); }
 
         /* Về Tôi / Stats */
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 40px;}
-        .stat-card { background-color: var(--card-bg); padding: 30px; border-radius: 12px; text-align: center; border: 1px solid var(--border-color); box-shadow: 0 4px 6px rgba(0,0,0,0.02);}
+        .stats-grid { display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap;}
+        .stat-card { background-color: var(--card-bg); padding: 30px; border-radius: 12px; text-align: center; border: 1px solid var(--border-color); box-shadow: 0 4px 6px rgba(0,0,0,0.02); min-width: 250px;}
         .stat-number { font-size: 2.5rem; font-weight: 700; color: var(--primary); font-family: 'Poppins', sans-serif; margin-bottom: 5px; }
 
-        /* Slider Chứng Chỉ */
+        /* Học Vấn & Chứng Chỉ */
+        .edu-block { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 30px; margin-bottom: 50px; display: flex; align-items: flex-start; gap: 20px; transition: var(--transition); }
+        .edu-block:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.03); border-color: var(--primary-light); }
+        .edu-icon { font-size: 3rem; color: #8b5cf6; background: rgba(139, 92, 246, 0.1); padding: 15px; border-radius: 12px; }
+        
         .cert-group { margin-bottom: 40px; }
         .cert-group h3 { font-size: 1.2rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--border-color); color: var(--text-muted); }
         .cert-slider { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
@@ -84,7 +88,7 @@
         .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
         .tag { background-color: var(--bg-color); color: var(--text-muted); padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid var(--border-color);}
         
-        /* ĐÃ ĐỒNG BỘ: Sửa hoàn toàn định dạng CSS mảng Blog */
+        /* Blog Analysis */
         .blog-box { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 40px; }
         .blog-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 20px; }
         .takeaway-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
@@ -105,6 +109,7 @@
         @media (max-width: 768px) {
             .hero-content { flex-direction: column; text-align: center; }
             .nav-links { display: none; }
+            .edu-block { flex-direction: column; text-align: center; align-items: center; }
             .blog-header { flex-direction: column; align-items: flex-start; }
             .modal-content { padding: 25px; }
         }
@@ -119,7 +124,8 @@
                 <li><a href="#about" data-i18n="nav_about">Về tôi</a></li>
                 <li><a href="#education" data-i18n="nav_edu">Học vấn & Chứng chỉ</a></li>
                 <li><a href="#projects" data-i18n="nav_projects">Case Studies</a></li>
-                <li><a href="#blog" data-i18n="nav_growth">Blog</a></li> </ul>
+                <li><a href="#blog" data-i18n="nav_growth">Blog</a></li>
+            </ul>
             <div class="controls">
                 <button class="icon-btn lang-switch" id="lang-toggle">EN</button>
                 <button class="icon-btn" id="theme-toggle"><i class="fa-solid fa-moon"></i></button>
@@ -153,17 +159,27 @@
                     <div class="stat-number" id="stat-projects" data-target="0">0</div>
                     <p data-i18n="stat_2">Dự án mũi nhọn</p>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="stat-data" data-target="0">0</div>
-                    <p data-i18n="stat_3">% Định hướng Data</p>
-                </div>
             </div>
         </div>
     </section>
 
     <section id="education">
         <div class="container">
-            <h2 class="section-title" data-i18n="title_certs">Chứng chỉ chuyên môn</h2>
+            <h2 class="section-title" data-i18n="title_edu_cert">Học vấn & Chứng chỉ</h2>
+            
+            <div class="edu-block">
+                <i class="fa-solid fa-graduation-cap edu-icon"></i>
+                <div>
+                    <h3 id="edu-major" style="font-size: 1.4rem; color: var(--text-main); margin-bottom: 5px;">...</h3>
+                    <p id="edu-school" style="color: var(--primary); font-weight: 600; margin-bottom: 10px;">...</p>
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px; flex-wrap: wrap;">
+                        <span id="edu-gpa" style="font-family: 'Poppins', sans-serif; font-weight: 700; color: #10b981; background: rgba(16, 185, 129, 0.1); padding: 5px 12px; border-radius: 6px;">GPA: ...</span>
+                        <span id="edu-status" style="font-weight: 600; color: var(--text-muted); border: 1px solid var(--border-color); padding: 4px 12px; border-radius: 6px;">...</span>
+                    </div>
+                    <p id="edu-desc" style="color: var(--text-muted); line-height: 1.7;">...</p>
+                </div>
+            </div>
+
             <div id="cert-container"></div>
         </div>
     </section>
@@ -178,7 +194,8 @@
     <section id="blog">
         <div class="container">
             <h2 class="section-title" data-i18n="title_growth">Blog & Phân tích</h2>
-            <div class="blog-box" id="blog-container"></div> </div>
+            <div class="blog-box" id="blog-container"></div> 
+        </div>
     </section>
 
     <div id="projectModal" class="modal-overlay">
@@ -207,18 +224,18 @@
 
         const i18n = {
             vi: {
-                nav_about: "Tổng quan", nav_edu: "Chứng chỉ", nav_projects: "Dự án", nav_growth: "Blog",
+                nav_about: "Tổng quan", nav_edu: "Học vấn", nav_projects: "Dự án", nav_growth: "Blog",
                 hero_title: "Chào bạn, tôi là <br><span style='color: var(--primary);'>Hoàng Vĩnh</span>",
                 title_about: "Chỉ số nổi bật", stat_1: "Tháng thực chiến", stat_2: "Dự án chuyên sâu",
-                title_certs: "Nền tảng & Chứng chỉ", title_projects: "Chiến dịch & Vận hành", title_growth: "Blog",
+                title_edu_cert: "Học vấn & Chứng chỉ", title_projects: "Chiến dịch & Vận hành", title_growth: "Blog",
                 btn_detail: "Xem chi tiết & Số liệu", btn_read_pdf: "Đọc bài phân tích", cert_verify: "Xác thực chứng chỉ",
                 modal_h1: "Bối cảnh (Context)", modal_h2: "Chiến lược (Strategy)", modal_h3: "Số liệu đạt được (Impact)"
             },
             en: {
-                nav_about: "Overview", nav_edu: "Certificates", nav_projects: "Projects", nav_growth: "Blog",
+                nav_about: "Overview", nav_edu: "Education", nav_projects: "Projects", nav_growth: "Blog",
                 hero_title: "Hi there, I'm <br><span style='color: var(--primary);'>Hoang Vinh</span>",
                 title_about: "Key Metrics", stat_1: "Months of Practice", stat_2: "Key Projects",
-                title_certs: "Certificates", title_projects: "Case Studies", title_growth: "Blog",
+                title_edu_cert: "Education & Certificates", title_projects: "Case Studies", title_growth: "Blog",
                 btn_detail: "View Details & Data", btn_read_pdf: "Read Full PDF", cert_verify: "Verify Credential",
                 modal_h1: "Context & Challenge", modal_h2: "Action & Strategy", modal_h3: "Project Impact"
             }
@@ -238,7 +255,14 @@
             
             document.getElementById('stat-months').setAttribute('data-target', portfolioData.profile.stats.months);
             document.getElementById('stat-projects').setAttribute('data-target', portfolioData.profile.stats.projects);
-            document.getElementById('stat-data').setAttribute('data-target', portfolioData.profile.stats.dataDriven);
+
+            // Render Học Vấn
+            const eduData = portfolioData.educationAndCerts.edu;
+            document.getElementById('edu-major').innerText = eduData.major[lang];
+            document.getElementById('edu-school').innerText = eduData.school[lang];
+            document.getElementById('edu-gpa').innerText = "GPA: " + eduData.gpa;
+            document.getElementById('edu-status').innerText = eduData.status[lang];
+            document.getElementById('edu-desc').innerText = eduData.desc[lang];
 
             // Render Certificates Slider
             const certContainer = document.getElementById('cert-container');
@@ -267,7 +291,7 @@
                 
                 certContainer.innerHTML += `
                     <div class="cert-group">
-                        <h3>${group.groupTitle[lang]}</h3>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 20px; color: var(--text-muted); border-left: 3px solid var(--border-color); padding-left: 10px;">${group.groupTitle[lang]}</h3>
                         <div class="cert-slider">${slides}</div>
                     </div>
                 `;
@@ -293,7 +317,7 @@
                 `;
             });
 
-            // ĐÃ ĐỒNG BỘ: Sửa logic render lấy từ blogAnalysis và đổ vào blog-container
+            // Render Blog
             const blogContainer = document.getElementById('blog-container');
             const ga = portfolioData.blogAnalysis.featuredArticle;
             let tkHtml = ga.takeaways.map(tk => `
