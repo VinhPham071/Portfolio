@@ -9,10 +9,10 @@ const portfolioData = {
         title: "Data-Driven Performance Marketing | Building Toward User Acquisition",
         email: "vinhpham071@gmail.com",
         phone: "+84 935 736 964",
+        linked: "https://www.linkedin.com/in/vinh-phamlehoang071/",
         stats: {
             months: 12,
             projects: 4,
-            dataDriven: 100
         }
     },
 
